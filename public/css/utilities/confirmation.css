@@ -417,3 +417,187 @@ article.confirmation-page {
         }
     }
 }
+
+@media print {
+    @page {
+        size: auto;
+        margin: 12mm;
+    }
+
+    body > header,
+    body > footer,
+    .confirmation-actions,
+    .confirmation-page .success-icon,
+    .confirmation-page .confirmation-message,
+    .confirmation-page .next-steps {
+        display: none !important;
+    }
+
+    html,
+    body {
+        background: white !important;
+        color: black !important;
+        min-height: auto !important;
+    }
+
+    main.content-grid {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .confirmation-page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .confirmation-page .confirmation-header {
+        margin: 0 0 16px;
+        padding: 0;
+    }
+
+    .confirmation-page .confirmation-content {
+        gap: 16px;
+    }
+
+    .confirmation-page .booking-details,
+    .confirmation-page .passengers-info,
+    .confirmation-page .important-info {
+        margin: 0 0 16px;
+        padding: 0;
+    }
+
+    .confirmation-page .detail-card,
+    .confirmation-page .passenger-info-card,
+    .confirmation-page .booking-reference,
+    .confirmation-page .important-info {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+    }
+
+    .confirmation-page .detail-card,
+    .confirmation-page .passenger-info-card {
+        padding: 12px;
+    }
+
+    .confirmation-page .passenger-value {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media print {
+    article.confirmation-page .confirmation-header {
+        padding: 8px;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    article.confirmation-page .booking-reference {
+        margin: 0;
+        padding: 8px 12px;
+    }
+
+    article.confirmation-page .confirmation-content {
+        display: block;
+    }
+
+    article.confirmation-page .details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    article.confirmation-page .section-title {
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+    }
+
+    article.confirmation-page .detail-icon {
+        display: none;
+    }
+
+    article.confirmation-page .detail-card {
+        padding: 8px;
+    }
+
+    article.confirmation-page .passenger-info-card {
+        padding: 0;
+    }
+
+    article.confirmation-page .passenger-header,
+    article.confirmation-page .passenger-details {
+        padding: 8px;
+    }
+
+    article.confirmation-page .passenger-details {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    article.confirmation-page .passenger-detail {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+@media print {
+    body,
+    main.content-grid {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    article.confirmation-page .confirmation-header {
+        padding: 8px !important;
+        margin-bottom: 12px !important;
+        gap: 8px !important;
+    }
+
+    article.confirmation-page .booking-reference {
+        padding: 8px !important;
+        margin: 0 !important;
+    }
+
+    article.confirmation-page .confirmation-content {
+        display: block !important;
+    }
+
+    article.confirmation-page .details-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    article.confirmation-page .detail-card {
+        padding: 8px !important;
+    }
+
+    article.confirmation-page .section-title {
+        margin: 0 0 8px !important;
+        padding-bottom: 4px !important;
+    }
+
+    article.confirmation-page .passenger-info-card {
+        padding: 0 !important;
+    }
+
+    article.confirmation-page .passenger-header,
+    article.confirmation-page .passenger-details {
+        padding: 8px !important;
+    }
+
+    article.confirmation-page .passenger-details {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+    }
+
+    article.confirmation-page .passenger-detail {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+}
